@@ -1,0 +1,7 @@
+@import '../mixins/media';
+
+$section-gap: 100px !important;
+
+@include onTablet {
+  $section-gap: 120px !important;
+}

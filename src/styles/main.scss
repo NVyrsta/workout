@@ -1,10 +1,22 @@
 @import './components/navbar.scss';
 @import './components/hero.scss';
+@import './components/categories.scss';
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', cursive;
 }
 
 a {
