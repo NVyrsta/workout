@@ -1,0 +1,71 @@
+@import '../mixins/media';
+@import '../variables/colors';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.hero {
+  background-image: url('../../images/hero/hero-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      padding: 110px 0;
+
+
+  @include onTablet {
+    padding: 160px 0;
+  }
+  @include onDesktop {
+    padding: 210px 0;
+  }
+
+  &__content {}
+  &__subtitle {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+        color: $dark-accent-color;
+        margin-bottom: 20px;
+
+  }
+  &__title {
+    color: $dark-shade-color;
+    font-size: 124px;
+    line-height: 1;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__title span {
+    position: relative;
+    padding: 0 20px;
+  }
+
+  &__title span:first-of-type {
+    color: $brand-color;
+  }
+
+  &__title span:last-of-type::after {
+    content: '';
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: $brand-color;
+  }
+
+  &__btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 58px;
+    width: 164px;
+    height: 58px;
+    background-color: $brand-color;
+    color: white;
+    font-weight: 500;
+  }
+
+  &__btn:hover {
+    background-color: $dark-shade-color;
+  }
+  &__btn span {}
+}
