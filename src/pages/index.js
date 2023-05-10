@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar'
 import Hero from '../../components/Hero'
 import Categories from '../../components/Categories'
 import Benefits from '../../components/Benefits'
+import AboutUs from '../../components/AboutUs'
 import Footer from '../../components/Footer'
 
 export default function Home() {
@@ -18,7 +19,8 @@ export default function Home() {
         <Navbar />
         <Hero/>
         <Categories />
-        <Benefits/>
+        <Benefits />
+        <AboutUs/>
         <Footer/>
       </>
 

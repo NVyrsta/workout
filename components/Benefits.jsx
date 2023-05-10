@@ -2,9 +2,9 @@ import React from 'react';
 
 const Benefits = () => {
   return (
-    <section className="benefits container">
+    <section className="benefits container section">
       <div className="benefits__content wrapper">
-        <h2 className="benefits__title">Why Choose Us.</h2>
+        <h2 className="benefits__title section-title">Why Choose Us<span>.</span></h2>
         <h3 className="benefits__subtitle">
           Keep fit, follow a healthy lifestyle with us!
         </h3>

@@ -1,0 +1,51 @@
+@import '../mixins/media';
+@import '../variables/colors';
+
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include onTablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__image {
+    background-image: url('../../images/about-us/about-us.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: left;
+    line-height: 1.5;
+
+    padding: 90px 30px;
+    height: 100%;
+    background-color: $dark-shade-color;
+    color: white;
+  }
+
+  &__desc {
+    font-size: 16px;
+  }
+  &__desc:first-of-type {
+    font-size: 20px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start
+  }
+
+  &__social-link {
+    @include flex-center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+  }
+}

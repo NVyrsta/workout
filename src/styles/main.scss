@@ -2,6 +2,35 @@
 @import './components/hero.scss';
 @import './components/categories.scss';
 @import './components/benefits.scss';
+@import './components/about-us.scss';
+
+@import '../styles/mixins/media';
+@import '../styles/variables/colors';
+
+
+// dynamic general styles
+.section {
+  margin: 0 auto 100px;
+
+  @include onTablet {
+    margin: 0 auto 120px;
+  }
+
+}
+.section-title {
+  font-size: 38px;
+  letter-spacing: 2px;
+  font-weight: 400;
+
+  @include onTablet {
+    font-size: 52px;
+  }
+
+  & span:last-of-type {
+    color: $brand-color;
+  }
+}
+
 
 // google fonts
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:wght@400;700&display=swap');
@@ -44,9 +73,5 @@ button {
 }
 .container {
   max-width: 1440px;
-  margin: 0 auto;
-}
-
-body {
-  min-height: 5000px;
+  margin: unset auto;
 }
