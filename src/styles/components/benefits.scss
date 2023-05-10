@@ -36,6 +36,19 @@
     border: 2px solid rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
+
+    &:nth-child(1) .benefits__icon {
+    background-image: url('../../images/benefits/delivery.png');
+  }
+  &:nth-child(2) .benefits__icon {
+    background-image: url('../../images/benefits/return.png');
+  }
+  &:nth-child(3) .benefits__icon {
+    background-image: url('../../images/benefits/eco.png');
+  }
+  &:nth-child(4) .benefits__icon {
+    background-image: url('../../images/benefits/payment.png');
+  }
   }
   &__icon {
     width: 50px;
@@ -45,18 +58,7 @@
     background-size: cover;
     margin-bottom: 20px;
   }
-  &__icon:nth-child(1) {
-    background-image: url('../../images/benefits/delivery.png');
-  }
-  &__icon:nth-child(2) {
-    background-image: url('../../images/benefits/return.png');
-  }
-  &__icon:nth-child(3) {
-    background-image: url('../../images/benefits/eco.png');
-  }
-  &__icon:nth-child(4) {
-    background-image: url('../../images/benefits/payment.png');
-  }
+
   &__card-title {
     margin-bottom: 20px;
     font-size: 24px;

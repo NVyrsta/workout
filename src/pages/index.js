@@ -4,6 +4,7 @@ import Hero from '../../components/Hero';
 import Categories from '../../components/Categories';
 import Benefits from '../../components/Benefits';
 import AboutUs from '../../components/AboutUs';
+import Comfort from '../../components/Comfort';
 import Footer from '../../components/Footer';
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
           <Categories />
           <Benefits />
           <AboutUs />
+          <Comfort/>
         </main>
         <footer>
           <Footer />

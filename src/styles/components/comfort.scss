@@ -1,0 +1,74 @@
+@import '../mixins/media';
+
+.comfort {
+  color: white;
+  background-image: url('../../images/comfort/comfort.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  font-size: 16px;
+  padding: 140px 24px 100px;
+
+  @include onTablet {
+    display: grid;
+    grid-template-columns: auto 60%;
+    padding: 120px 90px 160px;
+    background-position: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-size: 62px;
+    font-weight: 400;
+    @include onTablet {
+      font-size: 124px;
+    }
+  }
+
+  &__benefits {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__benefit {
+    font-size: 20px;
+    margin-right: 20px;
+
+    &::before {
+      content: '✓';
+      display: inline-block;
+      font-size: 14px;
+      border-radius: 50%;
+      border: 1px solid white;
+      padding: 2px 8px;
+      margin-right: 10px;
+      background-color: rgba($color: #fff, $alpha: 0.3);
+    }
+  }
+
+  &__desc {
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+
+  &__btn {
+    border: 2px solid white;
+    padding: 15px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  &__btn:hover {
+    color: black;
+    background-color: white;
+  }
+}
