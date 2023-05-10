@@ -1,11 +1,13 @@
 @import '../mixins/media';
 @import '../variables/colors';
+@import '../variables/gaps';
 
 .categories {
   &__content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 50px;
+    margin-bottom: $section-gap;
 
     @include onTablet {
       grid-template-columns: 2fr repeat(2, 1fr);
