@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import Navbar from '../../components/Navbar'
-import Hero from '../../components/Hero'
-import Categories from '../../components/Categories'
-import Benefits from '../../components/Benefits'
-import AboutUs from '../../components/AboutUs'
-import Footer from '../../components/Footer'
+import Head from 'next/head';
+import Navbar from '../../components/Navbar';
+import Hero from '../../components/Hero';
+import Categories from '../../components/Categories';
+import Benefits from '../../components/Benefits';
+import AboutUs from '../../components/AboutUs';
+import Footer from '../../components/Footer';
 
 export default function Home() {
   return (
@@ -16,14 +16,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <Navbar />
-        <Hero/>
-        <Categories />
-        <Benefits />
-        <AboutUs/>
-        <Footer/>
+        <header>
+          <Navbar />
+        </header>
+        <main>
+          <Hero />
+          <Categories />
+          <Benefits />
+          <AboutUs />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </>
-
     </>
-  )
+  );
 }

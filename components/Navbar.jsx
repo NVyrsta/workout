@@ -5,7 +5,7 @@ import { FaFacebookF, FaYoutube } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <header>
+    <>
       <div className="top-banner container">
         <div className="top-banner__content wrapper">
           <span className="top-banner__item">
@@ -101,7 +101,7 @@ const Navbar = () => {
           <div className="navbar__user">USER</div>
         </nav>
       </div>
-    </header>
+    </>
   );
 };
 
