@@ -86,6 +86,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="footer__created-by wrapper">
+        <hr />
+        <span>© Created by</span>
+        <span>All rights Reserved</span>
+      </div>
     </section>
   );
 };
