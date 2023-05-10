@@ -1,0 +1,50 @@
+@import '../mixins/media';
+
+.post {
+  padding: 30px 24px;
+  margin: 0 auto;
+
+  @include onDesktop {
+    width: 80%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    @include onTablet {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    color: $dark-accent-color;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  &__desc:last-of-type {
+    margin-bottom: 0;
+  }
+}

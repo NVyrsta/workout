@@ -12,10 +12,11 @@
     gap: 30px;
     text-align: center;
     padding-top: 70px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 
     @include onTablet {
-      grid-template-columns: 30% auto auto 30%;
+      grid-template-columns: 30% auto auto 20%;
+      gap: 50px;
       text-align: left;
     }
   }
@@ -28,7 +29,15 @@
       align-items: flex-start;
       justify-content: flex-start;
     }
+    &:last-of-type {
+
+      @include onTablet {
+
+        align-items: flex-end;
+      }
+    }
   }
+
 
   &__logo {
     @include flex-center;
@@ -85,7 +94,7 @@
   &__created-by {
     @include flex-center;
     flex-direction: column;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
 
     & hr {
       width: 100%;
