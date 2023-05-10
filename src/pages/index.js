@@ -6,7 +6,8 @@ import Benefits from '../../components/Benefits';
 import AboutUs from '../../components/AboutUs';
 import Comfort from '../../components/Comfort';
 import Brands from '../../components/Brands';
-import PostItem from '../../components/PostItem';
+import Blog from '../../components/Blog';
+// import PostItem from '../../components/PostItem';
 import Footer from '../../components/Footer';
 
 import posts from '@/assets/posts';
@@ -32,7 +33,8 @@ export default function Home() {
           <AboutUs />
           <Comfort />
           <Brands />
-          <PostItem posts={posts} />
+          <Blog posts={posts}/>
+          {/* <PostItem posts={posts} /> */}
         </main>
         <footer>
           <Footer />

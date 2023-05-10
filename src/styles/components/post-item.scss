@@ -1,0 +1,47 @@
+@import '../variables/colors';
+@import '../mixins/media';
+
+.post-item {
+  position: relative;
+  
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    height: 370px;
+
+    @include onTablet {
+      height: 220px;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__desc {
+    text-align: justify;
+    font-size: 16px;
+    color: $dark-accent-color;
+    line-height: 1.5;
+    height: 100px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

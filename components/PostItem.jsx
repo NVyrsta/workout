@@ -7,8 +7,13 @@ const PostItem = ({ posts }) => {
 
     return (
       <article className="post-item" key={id}>
-        <Link href={`/blog/${id}`} className="post-item__link">Link</Link>
-        <img src={`${img}`} alt={`post img ${id}`} />
+        <Link href={`/blog/${id}`} className="post-item__link">
+        </Link>
+        <img
+          src={`${img}`}
+          alt={`post img ${id}`}
+          className="post-item__img"
+        />
         <span className="post-item__date">{date}</span>
         <h3 className="post-item__title">{title}</h3>
         <div className="post-item__desc">
