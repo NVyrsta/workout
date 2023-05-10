@@ -1,9 +1,21 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AiOutlineShoppingCart, AiOutlineInstagram } from 'react-icons/ai';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa';
+import classNames from 'classnames';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('disable-scroll');
+    } else {
+      document.body.classList.remove('disable-scroll');
+    }
+  }, [isMenuOpen]);
+
+
   return (
     <>
       <div className="top-banner container">
@@ -20,7 +32,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="navbar container">
+      <div
+        className={classNames('navbar container', {
+          'menu-open': isMenuOpen
+        })}
+      >
         <nav className="navbar__content wrapper">
           <Link href="/" className="navbar__logo">
             <svg
@@ -88,10 +104,10 @@ const Navbar = () => {
               <FaFacebookF />
             </a>
             <a href="#" className="navbar__social-link">
-              <AiOutlineInstagram style={{ fill: "white" }} />
+              <AiOutlineInstagram style={{ fill: 'white' }} />
             </a>
             <a href="#" className="navbar__social-link">
-              <FaYoutube style={{ fill: "white" }}/>
+              <FaYoutube style={{ fill: 'white' }} />
             </a>
           </div>
 
@@ -99,6 +115,14 @@ const Navbar = () => {
             <AiOutlineShoppingCart size={25} />
           </div>
           <div className="navbar__user">USER</div>
+          <div className="navbar__btn" onClick={() => {
+            console.log(isMenuOpen);
+            setIsMenuOpen(!isMenuOpen);
+          }}>
+            <span>X</span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
       </div>
     </>

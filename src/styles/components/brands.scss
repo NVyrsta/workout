@@ -3,8 +3,6 @@
 @import '../variables/colors';
 
 .brands {
-  padding: 0 50px;
-
   @include onTablet {
   }
 
@@ -17,9 +15,11 @@
     padding: 0 28px;
   }
   .swiper-slide {
+
     @include flex-center;
     height: 320px;
     border: 2px solid rgba($color: #000000, $alpha: 0.2);
+
     @include onTablet {
       height: 155px;
     }
@@ -30,6 +30,7 @@
     font-size: 24px;
     font-weight: 600;
   }
+  
   & .swiper-button-prev::after {
     color: $dark-shade-color;
     margin-right: 24px;

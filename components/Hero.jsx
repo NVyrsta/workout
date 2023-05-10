@@ -9,8 +9,7 @@ const Hero = () => {
           new
           <span>collections</span>
           <br />
-          by top
-          <span>brands</span>
+          by top brands<span>.</span>
         </h1>
         <a href="#" role="button" className="hero__btn">
           Shop Now <span>⟶</span>

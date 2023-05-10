@@ -29,28 +29,24 @@
   &__title {
     margin-bottom: 40px;
     color: $dark-shade-color;
-    font-size: 124px;
+    font-size: 62px;
     line-height: 1;
     text-transform: uppercase;
-  }
 
-  &__title span {
-    position: relative;
-    padding: 0 20px;
+    @include onTablet {
+    font-size: 93px;
+    }
+    @include onDesktop {
+    font-size: 124px;
+    }
   }
-
+  
   &__title span:first-of-type {
-    color: $brand-color;
+    position: relative;
+    padding: 0 10px;
   }
-
-  &__title span:last-of-type::after {
-    content: '';
-    position: absolute;
-    bottom: 40px;
-    right: 10px;
-    width: 10px;
-    height: 10px;
-    background-color: $brand-color;
+  &__title span {
+    color: $brand-color;
   }
 
   &__btn {

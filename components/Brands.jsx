@@ -26,6 +26,7 @@ export default () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  
   return (
     <section className="brands container section">
       <Swiper
