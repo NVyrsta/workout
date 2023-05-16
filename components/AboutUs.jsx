@@ -4,7 +4,7 @@ import { FaFacebookF, FaYoutube } from 'react-icons/fa';
 
 const AboutUs = () => {
   return (
-    <section className="about-us container section">
+    <section className="about-us container section" id='about-us'>
       <div className="about-us__image"></div>
       <div className="about-us__content">
         <h2 className="about-us__title section-title">About us<span>.</span></h2>

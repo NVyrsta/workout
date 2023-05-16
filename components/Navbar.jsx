@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineShoppingCart, AiOutlineInstagram } from 'react-icons/ai';
+import { VscMenu, VscClose } from 'react-icons/vsc';
 import { FaFacebookF, FaYoutube } from 'react-icons/fa';
 import classNames from 'classnames';
 
@@ -68,38 +69,38 @@ const Navbar = () => {
           </Link>
 
           <ul className="navbar__list">
-            <li className="navbar__item">
-              <Link href="/about-us" className="navbar__link">
+            <li className="navbar__item" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/about" className="navbar__link">
                 About us.
               </Link>
             </li>
 
-            <li className="navbar__item">
+            <li className="navbar__item" onClick={() => setIsMenuOpen(false)}>
               <Link href="/sale" className="navbar__link">
                 Sale.
               </Link>
             </li>
 
-            <li className="navbar__item">
-              <Link href="/collection" className="navbar__link">
+            <li className="navbar__item" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/sale" className="navbar__link">
                 Collection.
               </Link>
             </li>
 
-            <li className="navbar__item">
+            <li className="navbar__item" onClick={() => setIsMenuOpen(false)}>
               <Link href="/blog" className="navbar__link">
                 Blog.
               </Link>
             </li>
 
-            <li className="navbar__item">
-              <Link href="/contact-us" className="navbar__link">
+            <li className="navbar__item" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/sale" className="navbar__link">
                 Contact us.
               </Link>
             </li>
           </ul>
 
-          <div className="navbar__social">
+          <div className="navbar__social" onClick={() => setIsMenuOpen(false)}>
             <a href="#" className="navbar__social-link">
               <FaFacebookF />
             </a>
@@ -115,13 +116,13 @@ const Navbar = () => {
             <AiOutlineShoppingCart size={25} />
           </div>
           <div className="navbar__user">USER</div>
-          <div className="navbar__btn" onClick={() => {
-            console.log(isMenuOpen);
-            setIsMenuOpen(!isMenuOpen);
-          }}>
-            <span>X</span>
-            <span></span>
-            <span></span>
+          <div
+            className="navbar__btn"
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+            }}
+          >
+            {!isMenuOpen ? <VscMenu /> : <VscClose />}
           </div>
         </nav>
       </div>

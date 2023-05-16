@@ -4,10 +4,10 @@ import Hero from '../../components/Hero';
 import Categories from '../../components/Categories';
 import Benefits from '../../components/Benefits';
 import AboutUs from '../../components/AboutUs';
+import MidSeasonSale from '../../components/MidSeasonSale';
 import Comfort from '../../components/Comfort';
 import Brands from '../../components/Brands';
 import Blog from '../../components/Blog';
-// import PostItem from '../../components/PostItem';
 import Footer from '../../components/Footer';
 
 import posts from '@/assets/posts';
@@ -31,10 +31,10 @@ export default function Home() {
           <Categories />
           <Benefits />
           <AboutUs />
+          <MidSeasonSale/>
           <Comfort />
           <Brands />
           <Blog posts={posts}/>
-          {/* <PostItem posts={posts} /> */}
         </main>
         <footer>
           <Footer />

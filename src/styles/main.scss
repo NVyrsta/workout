@@ -3,6 +3,7 @@
 @import './components/categories.scss';
 @import './components/benefits.scss';
 @import './components/about-us.scss';
+@import './components/mid-season-sale.scss';
 @import './components/comfort.scss';
 @import './components/brands.scss';
 @import './components/post-item.scss';
@@ -33,11 +34,7 @@ body.disable-scroll {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -63,6 +60,17 @@ button {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.add-to-cart-btn {
+  background-color: $dark-shade-color;
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  padding: 16px 30px;
+  font-size: 16px;
+}
+.add-to-cart-btn:hover {
+  background-color: $brand-color;
 }
 
 // dynamic general styles
@@ -96,10 +104,5 @@ button {
   @include onTablet {
     padding-left: 32px;
     padding-right: 32px;
-  }
-
-  @include onDesktop {
-    padding-left: unset;
-    padding-right: unset;
   }
 }

@@ -16,14 +16,6 @@ const Blog = ({ posts }) => {
         </h3>
         <div className="blog__posts">
           <PostItem posts={posts} />
-          {/* {posts.map((post) => (
-            <article className="blog__post">
-              <img src={post.img} alt="" className="blog__post-img" />
-              <h4 className="blog__post-title">{post.title}</h4>
-              <span>{post.date}</span>
-              <p className="blog__post-desc">{post.desc[0]}</p>
-            </article>
-          ))} */}
         </div>
       </div>
     </section>

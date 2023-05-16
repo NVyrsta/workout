@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../../../components/Layout';
-import posts from '@/assets/posts';
+import productsFromAPI from '@/assets/products';
 
-const Post = ({ post }) => {
-  const { id, img, desc, date, title } = post;
+const Product = ({ product }) => {
+  const { id, image, desc, title } = product;
 
-  if (!post) {
+  if (!product) {
     return <div>Loading...</div>;
   }
 
@@ -13,13 +13,10 @@ const Post = ({ post }) => {
     <Layout>
       <article key={id} className="post container">
         <div className="post__content">
-          <img src={img} alt="img" className="post__img" />
+          <img src={image} alt="img" className="post__img" />
           <div className="post__info">
-            <span className="post__date">{date}</span>
             <h3 className="post__title section-title">{title}</h3>
-            {desc.map((item) => (
-              <p className="post__desc">{item}</p>
-            ))}
+            <p>{desc}</p>
           </div>
         </div>
       </article>
@@ -27,17 +24,16 @@ const Post = ({ post }) => {
   );
 };
 
-export default Post;
+export default Product;
 
 export async function getServerSideProps({ params }) {
   const { id } = params;
 
-  const post = posts.find((item) => item.id === +id);
-  console.log(post);
+  const product = productsFromAPI.find((item) => item.id === +id);
 
   return {
     props: {
-      post
+      product
     }
   };
 }

@@ -122,10 +122,16 @@
   }
 
   &__social {
-    margin-left: auto;
+    width: 100%;
 
-    @include flex-space-between;
+    @include flex-center;
     gap: 15px;
+
+    @include onTablet {
+      margin-left: auto;
+      @include flex-space-between;
+      width: max-content;
+    }
   }
 
   &__social-link {
@@ -138,6 +144,7 @@
   &__cart {
     margin-left: auto;
   }
+
   &__user {
     margin-left: 15px;
   }
@@ -145,14 +152,16 @@
   &__btn {
     position: absolute;
     right: 50px;
-    top: 50px;
+    top: 32px;
     cursor: pointer;
 
     @include onDesktop {
       display: none;
     }
 
-
+    & svg {
+      font-size: 32px;
+    }
   }
 }
 
